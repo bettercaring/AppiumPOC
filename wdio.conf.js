@@ -1,4 +1,7 @@
+const path = require('path')
+
 exports.config = {
+
     //
     // ====================
     // Runner Configuration
@@ -24,6 +27,7 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
+        '.test/specs/**/*.js'
     ],
     // Patterns to exclude.
     exclude: [
@@ -53,11 +57,13 @@ exports.config = {
     //
     capabilities: [{
         // capabilities for local Appium web tests on an Android Emulator
+        // 'appium:deviceName': 'Android GoogleAPI Emulator',
         platformName: 'Android',
         browserName: 'Chrome',
-        'appium:deviceName': 'Android GoogleAPI Emulator',
-        'appium:platformVersion': '12.0',
-        'appium:automationName': 'UiAutomator2'
+        'appium:deviceName': 'Pixel 7 Pro',
+        'appium:platformVersion': '11.0',
+        'appium:automationName': 'UiAutomator2',
+        'appium:app': path.join(process.cwd(),'App/android/ApiDemos-debug.apk')
     }],
 
     //
