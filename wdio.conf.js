@@ -27,7 +27,8 @@ exports.config = {
     //
     specs: [
         // ToDo: define location for spec files here
-        '.test/specs/**/*.js'
+       './test/specs/**/*.js'
+       
     ],
     // Patterns to exclude.
     exclude: [
@@ -59,7 +60,7 @@ exports.config = {
         // capabilities for local Appium web tests on an Android Emulator
         // 'appium:deviceName': 'Android GoogleAPI Emulator',
         platformName: 'Android',
-        browserName: 'Chrome',
+        //browserName: 'Chrome',
         'appium:deviceName': 'Pixel 7 Pro',
         'appium:platformVersion': '11.0',
         'appium:automationName': 'UiAutomator2',
