@@ -1,7 +1,7 @@
 describe('sample test', () => {
     it('login chck- forgot password', async () => {
-      await driver.pause(4000)
-      const signinButton = await $('//*[@text="Log in"]')
+      await driver.pause(9000)
+      const signinButton = await $('//*[@buttontype="submit"]')
       await expect(signinButton).toHaveText('Log in')
       const forgotButton = await $('//*[@text="Forgot Password"]')
       await expect(forgotButton).toHaveText("Forgot Password")
@@ -13,11 +13,11 @@ describe('sample test', () => {
 
     });
     
-    it('Sign-in flow with Correct Password', async () => {
-     await driver.pause(3000)
+    it.only('Sign-in flow with Correct Password', async () => {
+     await driver.pause(8000)
      await $('//*[@hint= "Email"]').setValue("abvRav@donotuse.com")
      await $('//*[@hint= "Password"]').setValue("Mable2023")
-     const signinButton = await $('//*[@text="Log in"]')
+     const signinButton = await $('//*[@buttontype="submit"]')
      await signinButton.click()
      await driver.pause(6000) 
      const ClientWelcome = await $(`//*[@text= "Hi Rav"]`)
